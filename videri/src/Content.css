@@ -1,0 +1,13 @@
+#grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 125px 125px 125px;
+  grid-template-areas: ". . . ." ". . . ." ". . . .";
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+}
+
+.content {
+  background-color: #ffffff;
+}
