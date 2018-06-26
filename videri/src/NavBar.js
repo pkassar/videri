@@ -1,28 +1,25 @@
 import React, { Component } from 'react';
-import './NavBar.css'
+import './assets/NavBar.css'
+import logoNav from './assets/icon.png'
 class NavBar extends Component {
   render() {
     return (
       <div>
         <header className="App-header">
           <div className="topHalf">
-            <img alt="" src="/assets/Icon.png" />
+            <img id="logo" alt="" src={logoNav} />
             <h1 className="title">Videri</h1>
           </div>
           <div className="bottomHalf">
-            <ul>
-              <li> <button href="#">Canvases</button></li>
-              <li> <button id="content" href="#">Content</button></li>
-              <li> <button href="#">Playlist</button></li>
-            </ul>
+            <button href="#">Canvases</button>
+            <button id="content" href="#">Content</button>
+            <button href="#">Playlist</button>
           </div>
         </header>
       </div>
     );
   }
 }
-
-
 
 
 export default NavBar;
