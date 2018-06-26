@@ -1,7 +1,6 @@
 .folder {
   border: 1.5px solid #e7e7e7;
   position: relative;
-  /* padding: 15px; */
   background: white;
 }
 
@@ -11,9 +10,9 @@
 }
 
 .folderLogo {
-    z-index: 2;
+  z-index: 2;
   position: absolute;
-  left: 4px;;
+  left: 4px;
   height: 30px;
   width: 30px;
 }

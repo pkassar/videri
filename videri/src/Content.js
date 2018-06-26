@@ -8,7 +8,7 @@ class Content extends Component {
     let DISPLAYNAV = []
     let Contents = []
     if (this.props.state.folderView === true) {
-      DISPLAYNAV.push(<b>CONTENT FOLDERS</b>)
+      DISPLAYNAV.push(<b id="contents">CONTENT FOLDERS</b>)
       let folders = this.props.state.view.DATA.folders
       for (let i = 0; i < folders.length; i += 1) {
         Contents.push(

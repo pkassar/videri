@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import './assets/NavBar.css'
 import logoNav from './assets/icon.png'
 class NavBar extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      clicked: false
+    }
+  }
   render() {
     return (
       <div>
