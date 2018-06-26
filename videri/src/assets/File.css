@@ -1,0 +1,20 @@
+.file {
+  margin: 0;
+ border: 1.5px solid #e7e7e7;
+  position: relative;
+}
+
+.file img {
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  height: 100px;
+  width: 120px;
+}
+
+.descriptionWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+}
