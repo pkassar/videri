@@ -1,4 +1,4 @@
-```npm start``` bundle and launch app then listen on port 3000
+```npm start``` to begin and then open http://localhost:3000/
 
 
 To build the VIDERI browsing application I used react and it's top down directional flow in order to keep track of the current view
