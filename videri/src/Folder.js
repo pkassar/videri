@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import './Folder.css'
-
+import './assets/Folder.css'
+import folderLogo from './assets/folder.ico'
 
 class Folder extends Component {
   render() {
     return (
-      <div className="folder" key={this.props.key} name={this.props.name} onClick={(key) => { this.props.update(key) }}>
-        <img alt="." src={this.props.coverPicUrl} />
+      <div className="folder" name={this.props.name}
+        onDoubleClick={() => { this.props.update(this.props.name) }}>
+        <div className="imageWrapper">
+          <img className="folderLogo" alt="." src={folderLogo} />
+          <img className="cover" alt="." src={this.props.coverPicUrl} /></div>
         <div className="descriptionWrapper">
-          <div>{this.props.name}</div>
-          <div>{this.props.assets} assets</div>
+          <b>{this.props.name}</b>
+          <div className="assets">{this.props.assets} assets</div>
           <div><h6>Created</h6>{this.props.createdAt}</div>
         </div>
       </div>

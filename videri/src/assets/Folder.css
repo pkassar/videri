@@ -1,0 +1,46 @@
+.folder {
+  border: 1.5px solid #e7e7e7;
+  position: relative;
+  /* padding: 15px; */
+  background: white;
+}
+
+.imageWrapper {
+  height: 100px;
+  width: 100px;
+}
+
+.folderLogo {
+    z-index: 2;
+  position: absolute;
+  left: 4px;;
+  height: 30px;
+  width: 30px;
+}
+
+.cover {
+  z-index: 1;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  height: 96px;
+  width: 96px;
+}
+
+.assets {
+  font-weight: 200;
+}
+
+h6 {
+  padding-top: 15px;
+  margin: 2px;
+}
+
+.descriptionWrapper {
+  text-align: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}

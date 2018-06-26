@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import Folder from './Folder.js'
 import File from './File.js'
-import './Content.css'
+import './assets/Content.css'
 
 class Content extends Component {
   render() {
-
-    let CONTENTS = []
+    let DISPLAYNAV = []
+    let Contents = []
     if (this.props.state.folderView === true) {
+      DISPLAYNAV.push(<b>CONTENT FOLDERS</b>)
       let folders = this.props.state.view.DATA.folders
       for (let i = 0; i < folders.length; i += 1) {
-        CONTENTS.push(
+        Contents.push(
           <Folder
             key={i}
             update={this.props.update}
@@ -22,9 +23,14 @@ class Content extends Component {
       }
     }
     else {
+      DISPLAYNAV.push(
+        <div>
+          <b><button id="back" onClick={this.props.backHome}> &lt; </button>{this.props.state.currentFolder}</b>
+        </div>)
       let files = this.props.state.view
+      console.log(this.props.state)
       for (let i = 0; i < files.length; i += 1) {
-        CONTENTS.push(
+        Contents.push(
           <File
             key={i}
             title={files[i].title}
@@ -34,17 +40,19 @@ class Content extends Component {
           />)
       }
     }
-
     return (
-      <div className="content">
-        <button id="back" onClick={this.props.backHome}> back<i className="fa">&#xf104;</i></button>
-        <button>name</button>
-        <button>last update date</button>
-        <button>created date</button>
-        CONTENTS
-      <div id="grid-container">
-          {CONTENTS}
-          {CONTENTS}
+      <div className="content-nav">
+        <div className="content">
+          {DISPLAYNAV}
+        </div>
+        <div className="sort">
+          <button>name</button>
+          <button>last update date</button>
+          <button>created date</button>
+        </div>
+        <div id="grid-container">
+          {Contents}
+          {Contents}
         </div>
       </div>
     );

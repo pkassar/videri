@@ -1,0 +1,53 @@
+.App-header {
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 35px;
+  font-weight: 300;
+}
+
+.topHalf {
+  padding-left: 10px;
+  height: 45px;
+  text-align: left;
+  background-color: #0085ca;
+  color: #c5c5c5;
+  letter-spacing: 10px;
+  font-weight: lighter;
+}
+
+#logo {
+  position: absolute;
+  left: 0;
+  height: 45px;
+  width: 45px;
+}
+
+.bottomHalf {
+  padding-left: 25px;
+  line-height: 45px;
+  height: 45px;
+  background-color: #0069A0;
+  color: white;
+  text-align: left;
+  color: #c5c5c5;
+}
+
+.bottomHalf button {
+   text-transform: uppercase;
+  margin-left: 25px;
+  margin-right: 25px;
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#content {
+  color: #ffffff;
+}
