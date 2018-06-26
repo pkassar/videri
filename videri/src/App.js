@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
+import './assets/App.css';
 import Content from './Content.js'
 import NavBar from './NavBar.js'
-import DATA from './Data.js'
+import DATA from './assets/Data'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentFolder: null,
       folderView: true,
       view: {
         DATA
@@ -16,17 +17,25 @@ class App extends Component {
     this.update = this.update.bind(this)
     this.backHome = this.backHome.bind(this)
   }
-  update(key) {
-    console.log("key ", key)
+  update(name) {
+    let indexNeeded = 0
+    for (let i = 0; i < DATA.folders.length; i += 1) {
+      if (DATA.folders[i].name === name) {
+        indexNeeded = i
+      }
+    }
     this.setState({
+      currentFolder: name,
       folderView: false,
-      view: DATA.folders[0].assets
+      view: DATA.folders[indexNeeded].assets
     })
   }
+
   backHome() {
     this.setState({
+      currentFolder: null,
       folderView: true,
-      view: DATA
+      view: { DATA }
     })
   }
   render() {
@@ -34,8 +43,9 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Content
-          update={this.update} state={this.state}
-          backHome={this.backHome} state={this.state}
+          update={this.update}
+          state={this.state}
+          backHome={this.backHome}
         />
       </div>
     );
